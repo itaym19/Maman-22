@@ -30,3 +30,12 @@ void sub_comp (complex a, complex b){
     print_comp(c);
 }
 
+void mult_comp_real (complex c, double d){
+    double real, img;
+    complex a;
+    real = c[0] * d;
+    img = c[1] * d;
+    read_comp(&a, real, img);
+    print_comp(a);
+}
+
