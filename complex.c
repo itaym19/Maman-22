@@ -8,5 +8,5 @@ void read_comp (complex *c, double a, double b){
 }
 
 void print_comp (complex c){
-    printf("%.2lf + (%.2lf)i", c[0], c[1] );
+    printf("%.2lf + (%.2lf)i\n", c[0], c[1] );
 }
