@@ -22,6 +22,10 @@ int main()
     scanf("%lf", &real);
     printf("\nA * %.2lf value:\n", real);
     mult_comp_real(A, real);
+    printf("\nenter img value to multuply A\n");
+    scanf("%lf", &img);
+    printf("\nA * %.2lfi value:\n", img);
+    mult_comp_img(A, img);
 
     return 0;
 }
