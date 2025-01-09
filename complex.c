@@ -56,3 +56,8 @@ void mult_comp_comp (complex c, complex d){
     read_comp(&a, real, img);
     print_comp(a);
 }
+
+void abs_comp (complex c){
+    double absolute = sqrt( pow(c[0], 2) + pow(c[1], 2) );
+    printf("%.2lf", absolute);
+}
