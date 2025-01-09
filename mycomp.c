@@ -28,6 +28,8 @@ int main()
     mult_comp_img(A, img);
     printf("\nA * B value:\n");
     mult_comp_comp(A,B);
+    printf("\nA absolute value:\n");
+    abs_comp(A);
 
     return 0;
 }
