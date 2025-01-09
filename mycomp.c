@@ -26,6 +26,8 @@ int main()
     scanf("%lf", &img);
     printf("\nA * %.2lfi value:\n", img);
     mult_comp_img(A, img);
+    printf("\nA * B value:\n");
+    mult_comp_comp(A,B);
 
     return 0;
 }
