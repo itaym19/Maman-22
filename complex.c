@@ -48,3 +48,11 @@ void mult_comp_img (complex c, double d){
     print_comp(a);
 }
 
+void mult_comp_comp (complex c, complex d){
+    double real, img;
+    complex a;
+    real = c[0] * d[0] - c[1] * d[1];
+    img = c[0] * d[1] + c[1] * d[0];
+    read_comp(&a, real, img);
+    print_comp(a);
+}
