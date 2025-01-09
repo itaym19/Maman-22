@@ -61,3 +61,8 @@ void abs_comp (complex c){
     double absolute = sqrt( pow(c[0], 2) + pow(c[1], 2) );
     printf("%.2lf", absolute);
 }
+
+void stop() {
+	printf("Stopping the program...\n");
+	exit(0);
+}
