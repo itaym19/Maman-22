@@ -1,1 +1,10 @@
-
+typedef double complex[2];
+void read_comp (complex * c, double a, double b);
+void print_comp (complex c);
+void add_comp (complex a, complex b);
+void sub_comp (complex a, complex b);
+void mult_comp_real (complex c, double d);
+void mult_comp_img (complex c, double d);
+void mult_comp_comp (complex c, complex d);
+void abs_comp (complex c);
+void stop ();
