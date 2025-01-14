@@ -16,8 +16,8 @@ int main()
         return 1;
     }
     
-    printf("enter a command");
-    while (current_input_character != '\n' && current_input_character != EOF) { /* Read characters one by one */
+    printf("enter a command\n");
+    while ( (current_input_character = getchar()) != '\n' && current_input_character != EOF) { /* Read characters one by one */
         input[length++] = current_input_character;
         /* If we've reached the end of the buffer, resize it */
         if (length >= size) {
@@ -32,7 +32,7 @@ int main()
     }
     input[length] = '\0'; /* Null-terminate the string */
     printf("\nthe command you entered:\n%s\n", input);
-
+    
     return 0;
 }
 
