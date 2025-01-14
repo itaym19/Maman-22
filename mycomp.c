@@ -3,7 +3,7 @@
 int main()
 {
     double real, img;
-    complex A,B,C,D,E,F;
+    complex A,B,C,D,E,F = {0,0};
     printf("enter real and img values for A\n");
     scanf("%lf %lf", &real,&img);
     read_comp(&A, real, img);
