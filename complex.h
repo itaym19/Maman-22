@@ -8,3 +8,4 @@ void mult_comp_img (complex c, double d);
 void mult_comp_comp (complex c, complex d);
 void abs_comp (complex c);
 void stop ();
+char* recieve_string(char **input);
