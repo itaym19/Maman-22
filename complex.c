@@ -68,33 +68,34 @@ void stop() {
 	exit(0);
 }
 
-char* recieve_string(char *input) {
+char* recieve_string(char **input) {
     char *temp = NULL;
     size_t size = 30;
     size_t length = 0;
     char current_input_character;
     
-    input = malloc(size * sizeof(char));
-    if (input == NULL) { 
+    *input = malloc(size * sizeof(char));
+    if (*input == NULL) { 
         perror("Unable to allocate memory");
         return "";
     }
     
     printf("enter a command\n");
     while ( (current_input_character = getchar()) != '\n' && current_input_character != EOF) { /* Read characters one by one */
-        input[length++] = current_input_character;
+        (*input)[length++] = current_input_character;
         /* If we've reached the end of the buffer, resize it */
         if (length >= size) {
             size *= 2; /* Double the buffer size */
-            temp = realloc(input, size * sizeof(char)); /* Use a temporary pointer to handle realloc */
+            temp = realloc(*input, size * sizeof(char)); /* Use a temporary pointer to handle realloc */
             if (temp == NULL) { /* realloc fails */
                 perror("unable to reallocating memory");
-                return input;
+                free(temp);
+                return *input;
             }
-            input = temp;
+            *input = temp;
         }
     }
-    input[length] = '\0'; /* Null-terminate the string */
-    return input;
+    (*input)[length] = '\0'; /* Null-terminate the string */
+    return *input;
 }
 
