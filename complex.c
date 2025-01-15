@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
 #include "complex.h"
 
 void read_comp (complex *c, double a, double b){

@@ -3,8 +3,41 @@
 int main()
 {
     double real, img;
-    complex A,B,C,D,E,F;
-    printf("enter real and img values for A\n");
+    complex A,B,C,D,E,F = {0,0};
+    char *input = NULL;
+    char *temp = NULL;
+    size_t size = 30;
+    size_t length = 0;
+    char current_input_character;
+    
+    input = malloc(size * sizeof(char));
+    if (input == NULL) { 
+        perror("Unable to allocate memory");
+        return 1;
+    }
+    
+    printf("enter a command\n");
+    while ( (current_input_character = getchar()) != '\n' && current_input_character != EOF) { /* Read characters one by one */
+        input[length++] = current_input_character;
+        /* If we've reached the end of the buffer, resize it */
+        if (length >= size) {
+            size *= 2; /* Double the buffer size */
+            temp = realloc(input, size * sizeof(char)); /* Use a temporary pointer to handle realloc */
+            if (temp == NULL) { /* realloc fails */
+                perror("unable to reallocating memory");
+                return 1;
+            }
+            input = temp;
+        }
+    }
+    input[length] = '\0'; /* Null-terminate the string */
+    printf("\nthe command you entered:\n%s\n", input);
+    
+    return 0;
+}
+
+/*************************************************
+   printf("enter real and img values for A\n");
     scanf("%lf %lf", &real,&img);
     read_comp(&A, real, img);
     printf("enter real and img values for B\n");
@@ -29,7 +62,4 @@ int main()
     printf("\nA * B value:\n");
     mult_comp_comp(A,B);
     printf("\nA absolute value:\n");
-    abs_comp(A);
-
-    return 0;
-}
+    abs_comp(A);  */
