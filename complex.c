@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
 #include "complex.h"
 
 void read_comp (complex *c, double a, double b){
@@ -98,4 +100,18 @@ char* recieve_string(char **input) {
     (*input)[length] = '\0'; /* Null-terminate the string */
     return *input;
 }
+
+char *trim_white_spaces(char *s) {
+    char *end;
+    while( isspace(*s) ) s++;  /* Trim leading space */
+    if(*s == 0) return s;  /* all white spaces */ 
+    /* Trim trailing space */
+    end = s + strlen(s) - 1;
+    while( end > s && isspace(*end) ) end--;
+    end[1] = '\0';  /* Write new null terminator character */
+    
+    return s;
+}
+
+
 
