@@ -6,8 +6,12 @@ int main()
     complex A,B,C,D,E,F = {0,0};
     char *input = NULL;
     
-    recieve_string(&input);
+    input = recieve_string(&input);
     printf("\nthe command you entered:\n%s\n", input);
+    printf("\nlength:\n%lu\n", strlen(input));
+    input = trim_white_spaces(input); 
+    printf("\nthe trimmed command:\n%s\n", input);
+    printf("\nlength:\n%lu\n", strlen(input));
     
     return 0;
 }
