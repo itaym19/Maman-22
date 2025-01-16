@@ -6,7 +6,7 @@ int main()
     complex A,B,C,D,E,F = {0,0};
     char *input = NULL;
     
-    recieve_string(input);
+    recieve_string(&input);
     printf("\nthe command you entered:\n%s\n", input);
     
     return 0;
