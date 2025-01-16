@@ -9,3 +9,4 @@ void mult_comp_comp (complex c, complex d);
 void abs_comp (complex c);
 void stop ();
 char* recieve_string(char **input);
+char *trim_white_spaces(char *s);
