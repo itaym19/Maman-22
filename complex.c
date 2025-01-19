@@ -114,10 +114,12 @@ char *trim_white_spaces(char *s) {
 }
 
 void identify_command(char *s) {
+    char *buffer;
     int i = 0;
     while (!isspace(s[i])) i++;  /* go through characters of first word */
-    char buffer[i+1];
+    buffer = malloc( (i+1) * sizeof(char) );
     strncpy(buffer, s, i);
     printf("\ncommand:\n%s\n", buffer);
+    /* need to free buffer */
 }
 
