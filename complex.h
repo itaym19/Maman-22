@@ -10,3 +10,4 @@ void abs_comp (complex c);
 void stop ();
 char* recieve_string(char **input);
 char *trim_white_spaces(char *s);
+void identify_command(char *s);
