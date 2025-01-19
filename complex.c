@@ -113,5 +113,11 @@ char *trim_white_spaces(char *s) {
     return s;
 }
 
-
+void identify_command(char *s) {
+    int i = 0;
+    while (!isspace(s[i])) i++;  /* go through characters of first word */
+    char buffer[i+1];
+    strncpy(buffer, s, i);
+    printf("\ncommand:\n%s\n", buffer);
+}
 
