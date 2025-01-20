@@ -21,7 +21,11 @@ there are several demands:
 
 A user-friendly interface must be implemented so that the user can understand at each stage of the program what he or she must do. In particular, the program must notify the user with a message or prompt whenever it is ready to receive the next command. The program will continue to receive and execute command after command until the stop command is received.
 
-The program does not assume that the input is correct. The program must analyze each command and ensure that it is error-free. If an error is detected, the program will print a detailed error message and continue to the next command without executing the incorrect command.
+The program does not assume that the input is correct. The program must analyze each command and ensure that it is error-free. If an error is detected, the program will print a detailed error message and continue to the next command without executing the incorrect command. for example: 
+for the input read_comp G, 3, 6 the program should print the following error: Undefined complex variable
+for the input add_comp A the program should print the following error:  Missing parameter 
+for the input add_comp A ,, B the program should print the following error: Multiple consecutive commas
+for the input add_comp A , B f the program should print the following error: Extraneous text after end of command
 
 here is an example of a proper way the user should enter a command of choise:
 add_comp A, B
