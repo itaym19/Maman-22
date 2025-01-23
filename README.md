@@ -19,7 +19,7 @@ there are several demands:
 5. There must be no garbage characters at the end of the line (except whitespace characters).
 6. Command names will appear in lowercase only, and variable names in uppercase only.
 
-in the main function there there will be declared the the following complex variables: A,B,C,D,E,F and they will be initial
+in the main function there there will be declared the the following complex variables: A,B,C,D,E,F and they will be initialized to 0+0i.
 
 A user-friendly interface must be implemented so that the user can understand at each stage of the program what he or she must do. In particular, the program must notify the user with a message or prompt whenever it is ready to receive the next command. The program will continue to receive and execute command after command until the stop command is received.
 
